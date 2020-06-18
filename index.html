@@ -21,10 +21,10 @@
     <link rel="stylesheet" href="app.css">
 </head>
 
-<body >
+<body>
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html"> <img src="images/broadcast.png" alt="" srcset=""> FOLLOWERS</a>
-        <a class="navbar-brand" href="http://nocovid.netlify.app/"> <img src="images/broadcast.png" alt="" srcset=""> COVID UPDATES <img src="images/increase.png" alt=""></a>
+     
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -35,59 +35,79 @@
                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li>
-                   <h5 style="color: antiquewhite;"> PAGE VISITS:</h5>
-                    <img src="https://hitwebcounter.com/counter/counter.php?page=7441647&style=0006&nbdigits=5&type=page&initCount=0" title="Web Counter" Alt="counter free"   border="0" >
-                  
+                    <h5 style="color: antiquewhite;"> PAGE VISITS:</h5>
+                    <img src="https://hitwebcounter.com/counter/counter.php?page=7441647&style=0006&nbdigits=5&type=page&initCount=0"
+                        title="Web Counter" Alt="counter free" border="0">
+
                 </li>
-    
+
             </ul>
     </nav>
 
     <div class="container" id="app">
 
-        
+
         <div class="row header">
-            <h3>Watch  <img src="images/broadcast.png" alt="" srcset=""> Followers..</h3>
+            <h3> <img src="images/broadcast.png" alt="" srcset=""> Followers..</h3>
         </div>
 
         <div v-if=loading class="loading-section">
             <h2> <img src="images/timer.png" alt="">Loading.....</h2>
             <small class="loading_msg"> Please wait while we are showing your live follower count..</small>
         </div>
-     
+
 
         <div v-if="inputSection" class="row input-section">
             <div class="col input-section__item">
-                <small class="warning" v-if="showWarning"><img src="images/error.png" alt=""> Username Required !!</small>
+                <small class="warning" v-if="showWarning"><img src="images/error.png" alt=""> Username Required
+                    !!</small>
                 <br>
                 <small>Please input valid username.</small>
                 <br>
-                <img src="images/point.png" alt="">     <input v-model="inputBox" type="text" class="form-control" placeholder="USERNAME">
-                <Button @click="redirectTikTok" class="btn-success btn"> <img src="images/lens.png" alt="">Submit</Button>
-                 
+                <img src="images/point.png" alt=""> <input v-model="inputBox" type="text" class="form-control"
+                    placeholder="USERNAME">
+                <Button @click="redirectTikTok" class="btn-success btn"> <img src="images/lens.png"
+                        alt="">Submit</Button>
+
             </div>
         </div>
-        
+
         <div v-if="mianSection" class="row">
-            <div class="col-4 main-section">
+            <div class="col-4 main-section1">
                 <div @click="showInputSection" class="main-section__item">
                     <img src="images/tiktok.png" alt="tiktok image" srcset=""> <strong>TIK TOK</strong>
                 </div>
             </div>
-           <marquee behavior="" direction="">More Apps coming Soon...</marquee>
+            <marquee behavior="" direction="">More Apps coming Soon...</marquee>
 
         </div>
 
 
+
+        <!-- 222222 -->
+        <div class="row header">
+            <h3><img src="images/broadcast.png" alt="" srcset=""> COVID UPDATES</h3>
+        </div>
+
+        <div onclick="document.location.href='http://nocovid.netlify.app/'" class="row">
+            <div class="col-4 main-section2">
+                <div class="main-section__item">
+                    <img src="images/virus.png" alt="covid image" srcset=""> <strong>CORONA IN INDIA</strong>
+                </div>
+            </div>
+
+
+        </div>
+
     </div>
 
 
-    
+
     <div class="footer">
         <small> WE LOVE INDIA .</small>
         <br>
-    
-     </div>
+
+    </div>
 
     <script src="app.js"></script>
     <script src="main.js"></script>

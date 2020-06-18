@@ -34,13 +34,21 @@ button{
 }
 
 
-.main-section{
+.main-section1{
     border: 1px solid rgb(54, 53, 53);
     border-radius: 5px;
     box-shadow: 4px 8px 16px gray;
     margin: 5px;
     cursor: pointer;
     background: gold;
+}
+.main-section2{
+    border: 1px solid rgb(54, 53, 53);
+    border-radius: 5px;
+    box-shadow: 4px 8px 16px gray;
+    margin: 5px;
+    cursor: pointer;
+    background: rgb(238, 167, 167);
 }
 .main-section__item{
     margin: 5px;
