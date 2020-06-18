@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIVE Follower Count</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body >
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">LIVE FOLLOWERS</a>
+        <a class="navbar-brand" href="http://nocovid.netlify.app/"> <img src="images/virus.png" alt="">LIVE COVID UPDATES</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+    
+            </ul>
+    </nav>
+
+    <div class="container" id="app">
+
+        
+        <div class="row header">
+            <h1>Watch Live Followers..</h1>
+        </div>
+
+        <div v-if=loading class="loading-section">
+            <h2> <img src="images/timer.png" alt="">Loading.....</h2>
+            <small class="loading_msg"> Please wait while we are showing your live follower count..</small>
+        </div>
+     
+
+        <div v-if="inputSection" class="row input-section">
+            <div class="col input-section__item">
+                <small class="warning" v-if="showWarning"><img src="images/error.png" alt=""> Username Required !!</small>
+                <br>
+                <small>Please input valid username.</small>
+                <br>
+                <img src="images/point.png" alt="">     <input v-model="inputBox" type="text" class="form-control" placeholder="USERNAME">
+                <Button @click="redirectTikTok" class="btn-success btn"> <img src="images/lens.png" alt="">Submit</Button>
+                 
+            </div>
+        </div>
+        
+        <div v-if="mianSection" class="row">
+            <div class="col-3 main-section">
+                <div @click="showInputSection" class="main-section__item">
+                    <img src="images/tiktok.png" alt="tiktok image" srcset=""> <strong>TIK TOK</strong>
+                </div>
+            </div>
+           
+
+        </div>
+
+
+    </div>
+
+
+    
+    <div class="footer">
+        <small> WE LOVE INDIA .</small>
+      
+     </div>
+
+    <script src="app.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

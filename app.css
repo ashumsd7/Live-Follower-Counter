@@ -1,0 +1,53 @@
+.header{
+    border-bottom: 4px solid rgb(250, 63, 63);
+    display: inline-block;
+    margin: 10px;
+}
+.loading_msg{
+    color: green;
+    font-weight: bolder;
+}
+.input-section{
+   
+    border-radius: 5px;
+    box-shadow: 4px 8px 16px gray;
+    margin: 5px;
+ 
+}
+.input-section__item{
+    margin: 5px;
+}
+.warning{
+    color: red;
+    word-spacing: 3px;
+    font-weight: 700;
+}
+.input-section__item input {
+    width: 200px;
+    align-items: center;
+}
+button{
+    margin: 5px;
+}
+
+
+.main-section{
+    border: 1px solid rgb(54, 53, 53);
+    border-radius: 5px;
+    box-shadow: 4px 8px 16px gray;
+    margin: 5px;
+    cursor: pointer;
+}
+.main-section__item{
+    margin: 5px;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: green;
+    color: rgb(255, 247, 247);
+    text-align: center;
+    
+}

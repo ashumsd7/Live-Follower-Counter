@@ -1,0 +1,4 @@
+function getTiktok(){
+    alert("Dd");
+}
+
