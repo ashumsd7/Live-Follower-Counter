@@ -1,8 +1,10 @@
+
 .header{
     border-bottom: 4px solid rgb(250, 63, 63);
     display: inline-block;
     margin: 10px;
     box-shadow: 2px 4px 8px gray;
+    background: rgb(243, 231, 231);
 }
 .loading_msg{
     color: green;
