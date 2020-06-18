@@ -38,9 +38,11 @@ button{
     box-shadow: 4px 8px 16px gray;
     margin: 5px;
     cursor: pointer;
+    background: gold;
 }
 .main-section__item{
     margin: 5px;
+    
 }
 .footer {
     position: fixed;
