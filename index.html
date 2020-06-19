@@ -63,9 +63,10 @@
                 <small class="warning" v-if="showWarning"><img src="images/error.png" alt=""> Username Required
                     !!</small>
                 <br>
-                <small>Please input valid username.</small>
+                <small>  <img src="images/point.png" alt="">Please input valid username.</small>
                 <br>
-                <img src="images/point.png" alt=""> <input v-model="inputBox" type="text" class="form-control"
+                <small>You are Typing..</small> <strong>{{ inputBox }}</strong>
+                <input v-model="inputBox" type="text" class="form-control"
                     placeholder="USERNAME">
                 <Button @click="redirectTikTok" class="btn-success btn"> <img src="images/lens.png"
                         alt="">Submit</Button>
